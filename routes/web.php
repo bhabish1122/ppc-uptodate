@@ -143,7 +143,7 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 		// Route::get("form/importantForm", [ImportantFormController::class, "index"])->name('important.form');
 		Route::get('/form/importantForm','ImportantFormController@index')->name('important.form');
 		Route::get('/form/importantForm/create','ImportantFormController@create')->name('important.form.create');
-		// Route::post();
+		Route::post('form/importantForm/store', 'ImportantFormController@store')->name('important.form.store');
 		
 // config routes
 		Route::resource('/config','ConfigController');
@@ -177,7 +177,6 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 		// contact 
 		Route::resource('/welcome/contact','ContactController');
 		Route::get('/welcome/contact/status/{id}/{status}', 'ContactController@status')->name('contact.status');
-		
 
 		// core_person 
 		Route::resource('/welcome/core_person','CorePersonController');

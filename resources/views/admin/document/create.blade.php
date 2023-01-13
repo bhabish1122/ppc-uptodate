@@ -46,11 +46,11 @@
                       <option value="4"> Nirdeshika</option>
                       <option value="6"> Download</option>
                       {{-- <option value="7"> Yearly Budget</option> --}}
-                      <option value="8"> Red Book</option>
+                      {{-- <option value="8"> Red Book</option>
                       <option value="9"> Bid</option>
                       <option value="10"> Economic Survey</option>
                       <option value="11"> Reports related to Rights to Information</option>
-                      <option value="12"> Medium Term Expenditure Framework</option>
+                      <option value="12"> Medium Term Expenditure Framework</option> --}}
                       <option value="5"> Other</option>
                     </select>
                     @error('page')

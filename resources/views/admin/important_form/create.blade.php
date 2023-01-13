@@ -33,7 +33,7 @@
                 </a>
               </div>
               <!-- /.card-header -->
-              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.document.store')}}">
+              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.important.form.store')}}">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
