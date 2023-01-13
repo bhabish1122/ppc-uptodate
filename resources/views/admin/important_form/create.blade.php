@@ -11,7 +11,7 @@
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Home</a></li>
-          <li class="breadcrumb-item active text-capitalize">Important Form</li>
+          <li class="breadcrumb-item active text-capitalize">Document </li>
         </ol>
       </div>
     </div>
@@ -28,30 +28,22 @@
           <div class="col-12">
             <div class="card card-primary">
               <div class="card-header">
-                <a href="{{route('admin.report.index')}}">
+                <a href="{{route('admin.document.index')}}">
                   <i class="fas fa-arrow-left" title="Click to go back"></i>
                 </a>
               </div>
               <!-- /.card-header -->
-              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.report.store')}}">
+              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.document.store')}}">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="page">Page <code>*</code></label>
+                    <label for="page">Form Type<code>*</code></label>
                     <select class="form-control rounded-0" id="page" name="page"> 
-                      <option selected disabled>Select Report </option>
-                      <option value="6">Monthly Report</option>
-                      <option value="1">Quaterly Progress Report</option>
-                      <option value="7">Semi-annual Report</option>
-                      <option value="2">Yearly Report</option>
-                      {{-- <option value="8">Chemical inspection report</option>
-                      <option value="9">Self-publishing on Right to Information</option>
-                      <option value="10">Budgeted implementation action plan</option>
-                      <option value="11">Performance Agreement</option>
-                      <option value="12">Audit Report (Final)</option>
-                      <option value="13">Internal Audit Report</option>
-                      <option value="14">Consolidated Financial Statements</option>
-                    </select> --}}
+                      <option value="">Select Document/Type </option>
+                      <option value="1"> Daily Form</option>
+                      <option value="2"> Other</option>
+                      <option value="3"> Information collection form</option>
+                    </select>
                     @error('page')
                     <span class="text-danger font-italic" role="alert">
                       <strong>{{ $message }}</strong>
@@ -68,7 +60,7 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="photo" class="d-block">File <code> * PDF / Excel / Doc / PPt File only</code></label>
+                    <label for="photo" class="d-block">File <code>* PDF / Excel / Doc / PPt File only</code></label>
                     <input type="file" class="" id="photo" name="photo">
                     @error('photo')
                     <span class="text-danger font-italic" role="alert">
@@ -77,9 +69,9 @@
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="description">Description <code>*</code></label>
-                    <textarea  id="description" class="ckeditor"  name="description"></textarea>
-                    @error('description')
+                    <label for="remark">Remark <code>*</code></label>
+                    <textarea  id="remark" class="ckeditor"  name="remark"></textarea>
+                    @error('remark')
                     <span class="text-danger font-italic" role="alert">
                       <strong>{{ $message }}</strong>
                     </span>
@@ -89,7 +81,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Add Report</button>
+                  <button type="submit" class="btn btn-primary">Add Document </button>
                 </div>
               </form>
 

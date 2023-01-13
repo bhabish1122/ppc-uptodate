@@ -16,7 +16,7 @@
           <div class="card-header">
             <div class="row">
               <div class="col-md-2">
-                <a href="{{ route('admin.important_form.create')}}" class="btn btn-sm btn-primary text-capitalize rounded-0" data-toggle="tooltip" data-placement="top" title="Add Report">Add <i class="fas fa-user-plus fa-fw"></i> </a>
+                <a href="{{ route('admin.important.form.create')}}" class="btn btn-sm btn-primary text-capitalize rounded-0" data-toggle="tooltip" data-placement="top" title="Add Report">Add <i class="fas fa-user-plus fa-fw"></i> </a>
             
               </div>
               <div class="col-md-3">

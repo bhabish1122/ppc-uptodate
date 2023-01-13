@@ -12,12 +12,15 @@ use Auth;
 class ImportantFormController extends Controller
 {
   public function index(){
-    return view("view.admin.important_form.index");
+    return view("admin.important_form.index");
   }
-  public function create(Request $request){
-    return view("view.admin.important_form.create");
+  public function create(){
+    return view("admin.important_form.create");
   }
   
+  public function store(Request $request){
+    return $request;
+  }
   public function edit(Request $request){
    
   }
