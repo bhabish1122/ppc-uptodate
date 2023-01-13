@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Form;
 use Auth;
 
-class FormController extends Controller
+class ImportantFormController extends Controller
 {
   public function index(){
     return view("view.admin.important_form.index");
