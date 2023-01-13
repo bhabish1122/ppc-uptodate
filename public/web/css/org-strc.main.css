@@ -1,0 +1,16 @@
+.image-wrap {
+  width: 302px;
+  height: 352px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.uploader img {
+  position: relative;
+  width: 302px;
+  height: 352px;
+  top: -1px;
+  left: -1px;
+  z-index: 1;
+  border: none;
+  cursor: move;
+}

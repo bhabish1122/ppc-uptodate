@@ -1,0 +1,47 @@
+.bg-blink
+{
+  -webkit-animation: glow 3s ease-in-out infinite;
+  animation: glow 3s ease-in-out infinite;
+  border: 2px solid var(--success);
+}
+
+@-webkit-keyframes glow 
+{
+    0% { 
+        box-shadow: 0 0 2px var(--success); 
+    }
+    50% { 
+        box-shadow: 0 0 10px var(--success); 
+    }
+}
+
+@keyframes glow 
+{
+    0% { 
+        box-shadow: 0 0 2px var(--success); 
+    }
+    50% { 
+        box-shadow: 0 0 10px var(--success); 
+    }
+    
+}
+
+
+/*pagination*/
+.main-pagination > nav > ul{
+    margin: 0;
+    font-size: 12px
+}
+.main-pagination > nav > ul>li:first-child>a, .main-pagination > nav > ul>li:first-child>span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.main-pagination > nav > ul>li:last-child>a, .main-pagination > nav > ul>li:last-child>span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px
+}
+
+.t-0{
+    top: 0;
+}

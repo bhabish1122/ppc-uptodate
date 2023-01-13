@@ -1,0 +1,18 @@
+.foot a{
+    color: aliceblue;
+}
+.foot a:hover{
+    color: brown;
+}
+
+
+.footh{
+    color: aliceblue;
+}
+.footh:hover{
+    color: brown!important;
+}
+
+.bottomfoot{
+    background:brown;
+}
