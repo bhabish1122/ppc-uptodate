@@ -312,4 +312,4 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 		Route::get('video-gallery/search/list', 'VideoGalleryController@getVideoGalleryList')->name('getVideoGalleryList');
 
 });
-Route::get('/lallal/alla/ssds/sds', 'TestController@inde
+Route::get('/lallal/alla/ssds/sds', 'TestController@index')->name('setLang');
