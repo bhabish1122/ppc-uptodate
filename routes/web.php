@@ -139,8 +139,9 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 	Route::get('/form/report','FormController@report')->name('form.report');
 
 	//important form
-		Route::get("form/importantForm", [ImportantFormController::class, "index"])->name('important.form');
-		Route::get("form/importantForm", [ImportantFormController::class, "create"])->name('important_form.create');
+		// Route::get("form/importantForm", [ImportantFormController::class, "index"])->name('important.form');
+		Route::get('/form/importantForm','ImportantFormController@index')->name('important.form');
+		Route::get("form/importantForm/crearte", [ImportantFormController::class, "create"])->name('important_form.create');
 		// Route::post();
 		
 // config routes

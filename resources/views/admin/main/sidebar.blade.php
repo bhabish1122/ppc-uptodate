@@ -222,34 +222,13 @@
         </li>
 
 
-        <li class="nav-item has-treeview {{ (request()->is('home/importantform/*')) ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link {{ (request()->is('home/form/*')) ? 'active' : '' }}">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+        <li class="nav-item">
+          <a href="{{route('admin.important.form')}}" class="nav-link {{ (request()->is('home/report*')) ? 'active' : '' }}">
+            <i class="nav-icon fas fa-th"></i>
             <p>
               Important Form
-              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('admin.important.form')}}" class="nav-link {{ (request()->is('home/form/suggestion*')) ? 'active' : '' }}">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Daily Form</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{route('admin.important.form')}}" class="nav-link {{ (request()->is('home/form/complain*')) ? 'active' : '' }}">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Other Form</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{route('admin.important.form')}}" class="nav-link {{ (request()->is('home/form/report*')) ? 'active' : '' }}">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Information Collection Form</p>
-              </a>
-            </li>
-          </ul>
         </li>
 
       </ul>
