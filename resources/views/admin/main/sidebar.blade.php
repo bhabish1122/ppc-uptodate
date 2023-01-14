@@ -223,7 +223,7 @@
 
 
         <li class="nav-item">
-          <a href="{{route('admin.important.form')}}" class="nav-link {{ (request()->is('home/report*')) ? 'active' : '' }}">
+          <a href="{{route('admin.importantform.index')}}" class="nav-link {{ (request()->is('home/report*')) ? 'active' : '' }}">
             <i class="nav-icon fas fa-th"></i>
             <p>
               Important Form

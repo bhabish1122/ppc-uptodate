@@ -33,7 +33,7 @@
                 </a>
               </div>
               <!-- /.card-header -->
-              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.important.form.store')}}">
+              <form role="form" enctype="multipart/form-data" method="POST" action="{{route('admin.importantform.store')}}">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -42,7 +42,7 @@
                       <option value="">Select Document/Type </option>
                       <option value="1"> Daily Form</option>
                       <option value="2"> Other</option>
-                      <option value="3"> Information collection form</option>
+                      <option value="3"> Information collection Form</option>
                     </select>
                     @error('page')
                     <span class="text-danger font-italic" role="alert">
@@ -81,7 +81,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Add Document </button>
+                  <button type="submit" class="btn btn-primary">Add  </button>
                 </div>
               </form>
 

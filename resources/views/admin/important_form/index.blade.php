@@ -16,21 +16,15 @@
           <div class="card-header">
             <div class="row">
               <div class="col-md-2">
-                <a href="{{ route('admin.important.form.create')}}" class="btn btn-sm btn-primary text-capitalize rounded-0" data-toggle="tooltip" data-placement="top" title="Add Report">Add <i class="fas fa-user-plus fa-fw"></i> </a>
+                <a href="{{ route('admin.importantform.create')}}" class="btn btn-sm btn-primary text-capitalize rounded-0" data-toggle="tooltip" data-placement="top" title="Add Report">Add <i class="fas fa-user-plus fa-fw"></i> </a>
             
               </div>
               <div class="col-md-3">
-                <select class="form-control rounded-0" name="report_id" id="report_id"> 
-                  <option value="0">Daily Form</option>
-                  <option value="1">Other Form</option>
-                  <option value="2">information collection form</option>
-                  {{-- <option value="8">Chemical inspection report</option>
-                  <option value="9">Self-publishing on Right to Information</option>
-                  <option value="10">Budgeted implementation action plan</option>
-                  <option value="11">Performance Agreement</option>
-                  <option value="12">Audit Report (Final)</option>
-                  <option value="13">Internal Audit Report</option>
-                  <option value="14">Consolidated Financial Statements</option> --}}
+                <select class="form-control rounded-0" name="page" id="page"> 
+                  <option value="">Select Document/Type </option>
+                  <option value="1"> Daily Form</option>
+                  <option value="2"> Other</option>
+                  <option value="3"> Information collection Form</option>
                 </select>
               </div>
               <div class="col-md">
@@ -44,54 +38,18 @@
          
               <table class="table table-bordered table-hover yajra-datatable" id="yajra-datatable">
                 <thead class="table-primary text-center">                  
-
                   <tr>
+                    <th>Action</th>
                     <th width="10">SN</th>
                     <th>Title</th>
-                    <th class="text-left">Page</th>
+                    <th class="text-left">Type</th>
                     <th class="text-left">File</th>
-                    {{-- <th>Image</th> --}}
+                    <th class="text-left">Link</th>
                     <th>Status</th>
                     <th>Created At</th>
                   </tr>
                 </thead>
-                {{-- <tbody class="text-center">
-                  @foreach ($reports as $key => $report)
-                  
-                  <tr>
-                    <td>
-                      <a href="{{route('admin.report.edit',$report->id)}}" class="btn btn-sm btn-outline-info"  data-placement="top"title="Update"><i class="fas fa-edit"></i></a> 
-                      <form action="{{route('admin.report.destroy',$report->id)}}" method="post" class="d-inline-block delete-confirm"  data-placement="top" title="Permanent Delete">
-                      @csrf
-                      @method('DELETE')
-                      <button class="btn btn-sm btn-outline-danger" type="submit"><i class="fa fa-trash"></i></button>
-                      </form>
-                    </td>
-                    
-                    <td>{{$key+1}}</td>
-                    <td class="text-left">{{$report->name}}</td>
-                    <td class="text-left">{{$report->name_en}}</td>
-                    <td class="text-left">{{$report->designation}}</td>
-                    <td class="text-left">{{$report->designation_en}}</td>
-                    <td class="text-left">{{$report->department}}</td>
-                    <td class="text-left">{{$report->department}}</td>
-                    <td class="text-left">{{$report->address_np}}</td>
-                    <td><img src="{{URL::to('/')}}/image/report/{{$report->image_enc}}" width="50" height="50"></td>
-                    <td class="text-left">{{$report->is_employee == 1  ? 'Yes' : 'No'}}</td>
-                    <td class="text-left">{{$report->is_sachibalaya == 1  ? 'Yes' : 'No'}}</td>
-                    @if($report->is_active == 0)
-                    <td>Inactive <a href="{{route('admin.report.status',[$report->id,$report->is_active])}}"  title="Click to Publish"><i class="nav-icon fas fa-times-circle text-danger"></i></a></td>
-                    @else
-                    <td>Active <a href="{{route('admin.report.status',[$report->id,$report->is_active])}}" title="Click to Unpublish"><i class="nav-icon fas fa-check-circle text-success"></i></a></td>
-                    @endif
-
-                    <td>
-                      {{$report->created_at->format('H:i:s')}}
-                      <span class="badge badge-warning text-danger">{{$report->created_at->format('Y/m/d')}}</span>
-                    </td>
-                  </tr>
-                  @endforeach
-                </tbody> --}}
+          
               </table>
              
             </div>
@@ -113,7 +71,7 @@
 
   function searchFunction(){
     Pace.start();
-    var report_id = $('#report_id').val(),
+    var page = $('#page').val(),
     search = $('#search').val();
 
     var table = $('.yajra-datatable').DataTable({
@@ -129,9 +87,9 @@
         },
         serverSide: true,
         "ajax": {
-          "url": "{{route('admin.getReportList')}}",
+          "url": "{{route('admin.getImportantFormList')}}",
           "data": {
-            report_id: report_id,
+            page: page,
           }
         },
         columns: [
@@ -144,9 +102,9 @@
 
           {data: 'DT_RowIndex', name: 'DT_RowIndex',searchable: false,orderable:false},
           {data: 'title', name: 'title'},
-          {data: 'page', name: 'page'},
+          {data: 'type', name: 'type'},
+          {data: 'image', name: 'image'},
           {data: 'link', name: 'link',searchable: false,orderable:false},
-          // {data: 'image', name: 'image',searchable: false,orderable:false},
           {data: 'is_active', name: 'is_active',searchable: false,orderable:false},
           {data: 'created_at', name: 'created_at'},
            
@@ -154,8 +112,9 @@
     });
    
   }
+  
 
-  $("body").on("change","#report_id", function(event){
+  $("body").on("change","#page", function(event){
         Pace.start();
         searchFunction();
   });

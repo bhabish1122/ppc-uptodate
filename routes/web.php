@@ -140,10 +140,10 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 	Route::get('/form/report','FormController@report')->name('form.report');
 
 	//important form
-		// Route::get("form/importantForm", [ImportantFormController::class, "index"])->name('important.form');
-		Route::get('/form/importantForm','ImportantFormController@index')->name('important.form');
-		Route::get('/form/importantForm/create','ImportantFormController@create')->name('important.form.create');
-		Route::post('form/importantForm/store', 'ImportantFormController@store')->name('important.form.store');
+		Route::resource('form/importantform', 'ImportantFormController');
+
+		Route::get('form/importantForm/list', 'ImportantFormController@getImportantFormList')->name('getImportantFormList');
+		Route::get('/form/importantForm/status/{id}/{status}', 'ImportantFormController@status')->name('importantform.status');
 		
 // config routes
 		Route::resource('/config','ConfigController');
