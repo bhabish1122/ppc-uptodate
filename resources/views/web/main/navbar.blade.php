@@ -56,11 +56,11 @@
                     <li><a href="{{ route('web.document.index', 'regulation') }}">{{ __('lang.regulation')}}</a></li>  
                     <li><a href="{{ route('web.document.index', 'act_rule') }}">{{ __('lang.act_rule')}}</a></li>  
                     <li><a href="{{ route('web.document.index', 'nirdeshika') }}">{{ __('lang.nirdeshika')}}</a></li>
-                    <li><a href="{{ route('web.document.index', 'red-book') }}">{{ __('lang.red-book')}}</a></li> 
+                    {{-- <li><a href="{{ route('web.document.index', 'red-book') }}">{{ __('lang.red-book')}}</a></li> 
                     <li><a href="{{ route('web.document.index', 'bid') }}">{{ __('lang.bid')}}</a></li> 
                     <li><a href="{{ route('web.document.index', 'economicsurvey') }}">{{ __('lang.economicsurvey')}}</a></li> 
                     <li><a href="{{ route('web.document.index', 'reportrighttoinfo') }}">{{ __('lang.reportrighttoinfo')}}</a></li> 
-                    <li><a href="{{ route('web.document.index', 'mediumexpenditure') }}">{{ __('lang.mediumexpenditure')}}</a></li> 
+                    <li><a href="{{ route('web.document.index', 'mediumexpenditure') }}">{{ __('lang.mediumexpenditure')}}</a></li>  --}}
                     <li><a href="{{ route('web.document.index', 'other') }}">{{ __('lang.other')}}</a></li> 
 
                   </ul>
@@ -75,9 +75,9 @@
                     <li><a href="{{ route('web.report.index', 'quaterly-report') }}">{{ __('lang.quaterly_report')}}</a></li>
                     <li><a href="{{ route('web.report.index', 'semi-annual-report') }}">{{ __('lang.semi_report')}}</a></li>                   
                     <li><a href="{{ route('web.report.index', 'yearly-report') }}">{{ __('lang.yearly_report')}}</a></li>    
-                    {{-- <li><hr style="background-color:white"></li>      --}}
-                    <li><a href="#">{{__('lang.additional planning')}}</a></li> 
-                    <li><a href="#">{{__('lang.midterm review')}}</a></li>             
+                    <li><hr style="background-color:white"></li>     
+                    <li><a href="{{ route('web.report.index', 'additional planning') }}">{{__('lang.additional planning')}}</a></li> 
+                    <li><a href="{{ route('web.report.index', 'midterm review') }}"">{{__('lang.midterm review')}}</a></li>             
                     
                     {{-- <li><a href="{{ route('web.report.index', 'jinsi') }}">{{ __('lang.jinsi')}}</a></li>                   
                     <li><a href="{{ route('web.report.index', 'suchanako') }}">{{ __('lang.suchanako')}}</a></li>                   

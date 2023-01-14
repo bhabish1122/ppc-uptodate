@@ -44,7 +44,7 @@
                       <option value="2"> Regulations</option>
                       <option value="3"> Directory</option>
                       <option value="4"> Nirdeshika</option>
-                      <option value="6"> Download</option>
+                      {{-- <option value="6"> Download</option> --}}
                       {{-- <option value="7"> Yearly Budget</option> --}}
                       {{-- <option value="8"> Red Book</option>
                       <option value="9"> Bid</option>

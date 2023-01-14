@@ -143,9 +143,9 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 
 	//important form
 		// Route::get("form/importantForm", [ImportantFormController::class, "index"])->name('important.form');
-		Route::get('/form/importantForm','ImportantFormController@index')->name('important.form');
-		Route::get('/form/importantForm/create','ImportantFormController@create')->name('important.form.create');
-		Route::post('form/importantForm/store', 'ImportantFormController@store')->name('important.form.store');
+		Route::get('importantForm/index','ImportantFormController@index')->name('important.form');
+		Route::get('importantForm/create','ImportantFormController@create')->name('important.form.create');
+		Route::post('importantForm/store', 'ImportantFormController@store')->name('important.form.store');
 		
 // config routes
 		Route::resource('/config','ConfigController');

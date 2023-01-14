@@ -77,6 +77,16 @@ class ReportController extends Controller
 			$page_id = 14;
 			$page_title = __('lang.ek');
 		}
+		if($page == 'additional planning'){
+			$page_id = 15;
+			$page_title = __('lang.additional planning');
+		}
+		if($page == 'midterm review'){
+			$page_id = 16;
+			$page_title = __('lang.midterm review');
+		}
+		// <option value="15">Additional Planning</option>
+		// <option value="16">Midterm Review</option>
 		
 		$data_list = Report::where('page', $page_id)
 							->where('is_active', true)
