@@ -84,6 +84,8 @@ Route::namespace('Web')->prefix('')->name('web.')->middleware(['web','setlocale'
 		Route::get('document/{page}', 'DocumentController@index')->name('document.index');
 		Route::get('document/{page}/detail/{slug}', 'DocumentController@show')->name('document.show');
 
+		//important form
+		Route::get("importantForm/{page}", ['App\Http\Controllers\Web\ImportantFormController', "index"])->name("important.form.index");
 	
 	// ------------------ Gallery -----------------------
 		// video
