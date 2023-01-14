@@ -105,9 +105,9 @@
                   <li class="has-children  {{ (request()->is('notice/*')) ? 'active' : '' }}">
                     <a href="javascript:void(0);" >{{__('lang.important form')}}</a>
                     <ul class="dropdown arrow-top">
-                      <li><a href="{{ route('web.important.form.index','daily form') }}">{{ __('lang.daily form')}}</a></li>  
-                      <li><a href="{{ route('web.important.form.index','other') }}">{{ __('lang.other')}}</a></li>  
-                      <li><a href="{{ route('web.important.form.index','information collection form') }}"">{{__('lang.information collection form')}}</a></li>     
+                      <li><a href="{{ route('web.importantform.index','daily-form') }}">{{ __('lang.daily form')}}</a></li>  
+                      <li><a href="{{ route('web.importantform.index','other') }}">{{ __('lang.other')}}</a></li>  
+                      <li><a href="{{ route('web.importantform.index','information-collection-form') }}"">{{__('lang.information collection form')}}</a></li>     
                     </ul>
                   </li>
                 {{-- Bill Sarwajanikaran --}}

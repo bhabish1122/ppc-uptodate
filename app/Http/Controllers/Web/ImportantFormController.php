@@ -21,16 +21,16 @@ class ImportantFormController extends Controller
 		$quickmenus = $this->allQuickMenu(5)['quickmenu'];
 		$contacts = $this->allContact(1)['contact'];
 
-		if($page == 'daily form'){
-			$page_id = 0;
+		if($page == 'daily-form'){
+			$page_id = 1;
 			$page_title = __('lang.daily form');
 		}
 		if($page == 'other'){
-			$page_id = 1;
+			$page_id = 2;
 			$page_title = __('lang.other');
 		}
-		if($page == 'information collection form'){
-			$page_id = 2;
+		if($page == 'information-collection-form'){
+			$page_id = 3;
 			$page_title = __('lang.information collection form');
 		}
 		$data_list = ImportantForm::where('page', $page_id)

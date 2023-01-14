@@ -84,6 +84,10 @@ Route::namespace('Web')->prefix('')->name('web.')->middleware(['web','setlocale'
 		Route::get('document/{page}', 'DocumentController@index')->name('document.index');
 		Route::get('document/{page}/detail/{slug}', 'DocumentController@show')->name('document.show');
 
+	// ------------------ All Important Form -----------------------
+		Route::get('importantform/{page}', 'ImportantFormController@index')->name('importantform.index');
+		Route::get('importantform/{page}/detail/{slug}', 'ImportantFormController@show')->name('importantform.show');
+
 	
 	// ------------------ Gallery -----------------------
 		// video
@@ -116,7 +120,7 @@ Route::namespace('Web')->prefix('')->name('web.')->middleware(['web','setlocale'
 	
 	Route::get('/sachibalaya', 'AboutController@sachibalaya')->name('sachibalaya');
 
-	Route::get('about/bill', 'AboutController@bill')->name('about.bill');// list-of-director-generals
+	Route::get('about/bill', 'AboutController@bill')->name('about.bill');// list-of-director-generals 
 	
 
 
@@ -140,10 +144,10 @@ Route::namespace('Admin')->prefix('home')->name('admin.')->middleware(['auth'])-
 	Route::get('/form/report','FormController@report')->name('form.report');
 
 	//important form
-		Route::resource('form/importantform', 'ImportantFormController');
+		Route::resource('importantform', 'ImportantFormController');
 
-		Route::get('form/importantForm/list', 'ImportantFormController@getImportantFormList')->name('getImportantFormList');
-		Route::get('/form/importantForm/status/{id}/{status}', 'ImportantFormController@status')->name('importantform.status');
+		Route::get('importantForm/list', 'ImportantFormController@getImportantFormList')->name('getImportantFormList');
+		Route::get('/importantForm/status/{id}/{status}', 'ImportantFormController@status')->name('importantform.status');
 		
 // config routes
 		Route::resource('/config','ConfigController');

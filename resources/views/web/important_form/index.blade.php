@@ -8,7 +8,7 @@
 			<div class="verticals ten offset-by-one">
 				<ol class="breadcrumb breadcrumb-fill2 style4">
 					<li><a href="{{ route('web.welcome') }}"><i class="fa fa-home"></i></a></li>
-					<li>{{ __('lang.document')}}</li>
+					<li>{{ __('lang.important form')}}</li>
 					<li class="active">{{$page_title}}</li>
 				</ol>
 			</div>
@@ -43,11 +43,11 @@
 										$ppt_ext = array('pptx','ppt');
 										@endphp
 										@if ($element->ext == 'pdf')
-										<a href="{{URL::to('/')}}/files/document/{{$element->image_enc}}" target="_blank">
+										<a href="{{URL::to('/')}}/files/importantform/{{$element->image_enc}}" target="_blank">
 											<i class="fas fa-file-pdf fa-2x text-danger"></i> 
 										</a>
 										@endif
-										<a href="{{URL::to('/')}}/files/document/{{$element->image_enc}}" download>
+										<a href="{{URL::to('/')}}/files/importantform/{{$element->image_enc}}" download>
 											@if (in_array($element->ext, $doc_ext))
 											<i class="fas fa-file-word fa-2x text-primary"></i> 
 											@endif
