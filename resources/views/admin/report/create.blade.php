@@ -44,6 +44,8 @@
                       <option value="1">Quaterly Progress Report</option>
                       <option value="7">Semi-annual Report</option>
                       <option value="2">Yearly Report</option>
+                      <option value="15">{{__("lang.additional planning")}}</option>
+                      <option value="16">{{__("lang.midterm review")}}</option>
                       {{-- <option value="8">Chemical inspection report</option>
                       <option value="9">Self-publishing on Right to Information</option>
                       <option value="10">Budgeted implementation action plan</option>

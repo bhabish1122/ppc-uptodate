@@ -136,7 +136,7 @@ return [
 
 	"important form" => "Important Form",
 	"daily form" => "Daily Form",
-	"other form" => "Other Form",
+	"other form" => "Other",
 	"additional planning" => "Additional Planning",
 	"information collection form" => "Information Collection Form", 
 	"midterm review" => "Midterm Review",

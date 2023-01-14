@@ -47,13 +47,15 @@
                         <option value="1" {{$reports->page == 1 ? 'selected' : ''}}>Quaterly Progress Report</option>
                         <option value="7" {{$reports->page == 7 ? 'selected' : ''}}>Semi-annual Report</option>
                         <option value="2" {{$reports->page == 2 ? 'selected' : ''}}>Yearly Report</option>
-                        <option value="8" {{$reports->page == 8 ? 'selected' : ''}}>Chemical inspection report</option>
+                        <option value="15" {{$reports->page == 15 ? 'selected' : ''}}>Additional Planning</option>
+                        <option value="16" {{$reports->page == 16 ? 'selected' : ''}}>Midterm Review</option>
+                        {{-- <option value="8" {{$reports->page == 8 ? 'selected' : ''}}>Chemical inspection report</option>
                         <option value="9" {{$reports->page == 9 ? 'selected' : ''}}>Self-publishing on Right to Information</option>
                         <option value="10" {{$reports->page == 10 ? 'selected' : ''}}>Budgeted implementation action plan</option>
                         <option value="11" {{$reports->page == 11 ? 'selected' : ''}}>Performance Agreement</option>
                         <option value="12" {{$reports->page == 12 ? 'selected' : ''}}>Audit Report (Final)</option>
                         <option value="13" {{$reports->page == 13 ? 'selected' : ''}}>Internal Audit Report</option>
-                        <option value="14" {{$reports->page == 14 ? 'selected' : ''}}>Consolidated Financial Statements</option>
+                        <option value="14" {{$reports->page == 14 ? 'selected' : ''}}>Consolidated Financial Statements</option> --}}
                       </select>
                       @error('page')
                       <span class="text-danger font-italic" role="alert">

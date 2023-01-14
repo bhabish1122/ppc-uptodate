@@ -47,13 +47,13 @@
                         <option value="2" {{$documents->page == 2 ? 'selected' : ''}}> Regulations</option>
                         <option value="3" {{$documents->page == 3 ? 'selected' : ''}}> Directory</option>
                         <option value="4" {{$documents->page == 4 ? 'selected' : ''}}> Nirdeshika</option>
-                        <option value="6" {{$documents->page == 6 ? 'selected' : ''}}> Download</option>
+                        {{-- <option value="6" {{$documents->page == 6 ? 'selected' : ''}}> Download</option> --}}
                         {{-- <option value="7" {{$documents->page == 7 ? 'selected' : ''}}> Yearly Budget</option> --}}
-                        <option value="8" {{$documents->page == 8 ? 'selected' : ''}}> Red Book</option>
+                        {{-- <option value="8" {{$documents->page == 8 ? 'selected' : ''}}> Red Book</option>
                         <option value="9" {{$documents->page == 9 ? 'selected' : ''}}> Bid</option>
                         <option value="10" {{$documents->page == 10 ? 'selected' : ''}}> Economic Survey</option>
                         <option value="11" {{$documents->page == 11 ? 'selected' : ''}}> Reports related to Rights to Information</option>
-                        <option value="12" {{$documents->page == 12 ? 'selected' : ''}}> Medium Term Expenditure Framework</option>
+                        <option value="12" {{$documents->page == 12 ? 'selected' : ''}}> Medium Term Expenditure Framework</option> --}}
                         <option value="5" {{$documents->page == 5 ? 'selected' : ''}}> Other</option>
                       </select>
                       @error('page')
